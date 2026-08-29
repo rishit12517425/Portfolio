@@ -1,0 +1,616 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Rishit Jain - Software Developer</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#44e2cd",
+                        "surface-dim": "#0b1326",
+                        "tertiary-fixed-dim": "#ffafd3",
+                        "secondary-fixed": "#62fae3",
+                        "surface-container": "#171f33",
+                        "on-secondary-fixed": "#00201c",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#0d0096",
+                        "surface-variant": "#2d3449",
+                        "surface-container-high": "#222a3d",
+                        "on-secondary": "#003731",
+                        "inverse-surface": "#dae2fd",
+                        "primary-container": "#8083ff",
+                        "on-tertiary": "#620040",
+                        "outline": "#908fa0",
+                        "surface-bright": "#31394d",
+                        "tertiary": "#ffafd3",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#004d44",
+                        "surface": "#0b1326",
+                        "surface-container-lowest": "#060e20",
+                        "on-surface": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#85145a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "on-primary-fixed": "#07006c",
+                        "on-background": "#dae2fd",
+                        "background": "#0b1326",
+                        "primary-fixed": "#e1e0ff",
+                        "tertiary-container": "#e364a7",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-primary": "#1000a9",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "surface-tint": "#c0c1ff",
+                        "outline-variant": "#464554",
+                        "on-surface-variant": "#c7c4d7",
+                        "tertiary-fixed": "#ffd8e7",
+                        "surface-container-highest": "#2d3449",
+                        "inverse-primary": "#494bd6",
+                        "on-tertiary-fixed": "#3d0026",
+                        "inverse-on-surface": "#283044",
+                        "on-secondary-fixed-variant": "#005047",
+                        "secondary-container": "#03c6b2",
+                        "on-tertiary-container": "#560038",
+                        "secondary-fixed-dim": "#3cddc7",
+                        "surface-container-low": "#131b2e",
+                        "primary": "#c0c1ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap-mobile": "64px",
+                        "gutter": "24px",
+                        "container-max": "1200px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "label-mono": ["JetBrains Mono"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-sm": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-md": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-sm": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar Component -->
+<header class="fixed top-0 w-full z-50 bg-surface-container-low/80 backdrop-blur-md shadow-sm transition-all duration-300">
+<nav class="flex justify-between items-center h-20 px-gutter max-w-container-max mx-auto">
+<a class="font-headline-sm text-headline-sm active:scale-95 transition-transform hover:text-secondary-fixed duration-200 text-on-surface-variant" href="#">
+                Rishit Jain
+            </a>
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md">
+<a class="text-on-surface-variant" href="#home">Home</a>
+<a class="hover:text-primary transition-colors hover:text-secondary-fixed duration-200 text-on-surface-variant" href="#skills">Skills</a>
+<a class="hover:text-primary transition-colors hover:text-secondary-fixed duration-200 text-on-surface-variant" href="#projects">Projects</a>
+<a class="hover:text-primary transition-colors hover:text-secondary-fixed duration-200 text-on-surface-variant" href="#education">Education</a>
+<a class="hover:text-primary transition-colors hover:text-secondary-fixed duration-200 text-primary font-bold border-b-2 border-primary pb-1" href="#contact">Contact Us</a></div>
+
+</nav>
+</header>
+<main class="flex-1 w-full max-w-container-max mx-auto px-margin-mobile md:px-gutter pt-32 pb-section-gap-mobile md:pb-section-gap">
+<!-- Hero Section -->
+<section class="mb-section-gap flex flex-col md:flex-row items-center justify-between gap-12 mt-12 md:mt-24" id="home">
+<div class="flex-1 space-y-6 mx-auto">
+<p class="font-label-mono text-label-mono text-secondary">Hi, I'm</p>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary-fixed">Rishit Jain</h1>
+<h2 class="font-headline-md text-headline-md text-on-surface-variant">Software Developer</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+                    A passionate developer focused on creating robust software solutions. I specialize in backend development, AI integrations, and building scalable applications with clean, maintainable code. Always eager to learn and tackle complex technical challenges.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="inline-flex items-center gap-2 bg-primary text-on-primary font-label-mono text-label-mono px-6 py-3 rounded-lg hover:bg-primary-fixed transition-colors shadow-md shadow-primary/20 hover:shadow-primary/40 duration-300" href="https://lh3.googleusercontent.com/aida-public/AB6AXuAStRGClnnsLbneBi28VEuHSaqHviH37xKoemrL_EFx8BCZgvCPBwjRF4dgwIcZxhG4OdiplSHos_Rtm0sXkCnHn3mRdBbi5bL7qby6q8F72m5KYMzQR6a1x35f-nwKfPlgdQBxxNpM4GOEtQwV00kOXLX8ethmcCxW-KwjfjZL6xTpveQb8pxuUWCyiQNNMJgvWEDbpf__B0m-3Oad0goWIwU6-e7p-H5Kb_V1IhdzteAjvPvWRA72c3oSEAZ9mivYEFY" target="_blank" rel="noopener noreferrer">
+<span class="material-symbols-outlined text-[18px]">description</span>
+                        Resume
+                    </a>
+<a class="inline-flex items-center gap-2 border border-outline text-on-surface hover:text-primary hover:border-primary font-label-mono text-label-mono px-6 py-3 rounded-lg transition-colors bg-surface-container/50 backdrop-blur-sm" href="https://github.com/rishit12517425">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                      GitHub
+                    </a>
+<a class="inline-flex items-center gap-2 border border-outline text-on-surface hover:text-primary hover:border-primary font-label-mono text-label-mono px-6 py-3 rounded-lg transition-colors bg-surface-container/50 backdrop-blur-sm" href="https://www.linkedin.com/in/rishit-jain-996659372/">
+<span class="material-symbols-outlined text-[18px]">link</span>
+                        LinkedIn
+                    </a>
+</div>
+</div>
+
+</section>
+<!-- Technical Arsenal Section -->
+<section class="mb-section-gap scroll-mt-32" id="skills">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-3">
+<span class="material-symbols-outlined">construction</span>
+                Technical Arsenal
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Languages -->
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-2 group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary">code_blocks</span>
+                        Languages
+                    </h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Python, C++, C</li>
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> JavaScript, HTML, CSS</li>
+</ul>
+</div>
+<!-- Technologies -->
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-2 group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary">memory</span>
+                        Technologies
+                    </h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> React JS, Next JS</li>
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Tailwind CSS, Streamlit</li>
+</ul>
+</div>
+<!-- Databases & Tools -->
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-2 group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary">database</span>
+                        Databases &amp; Tools
+                    </h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> MongoDB, SQL</li>
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Git, GitHub, VS Code</li>
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Figma, Vercel, Render</li>
+</ul>
+</div>
+<!-- Soft Skills -->
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6 flex items-center gap-2 group-hover:text-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary">psychology</span>
+                        Soft Skills
+                    </h3>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Problem Solving</li>
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Communication &amp; Teamwork</li>
+<li class="flex items-center gap-3"><div class="w-2 h-2 rounded-full bg-primary"></div> Time Management</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Featured Projects Section -->
+<section class="mb-section-gap scroll-mt-32" id="projects">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-3">
+<span class="material-symbols-outlined">folder_special</span>
+                Featured Projects
+            </h2>
+<!-- ================= PROJECTS ================= -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+    <!-- Project 1 -->
+    <div class="bg-surface-container rounded-xl border border-white/5 shadow-lg overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 group flex flex-col h-full">
+
+        <div
+            class="bg-cover bg-center w-full h-48 border-b border-white/5 opacity-80 group-hover:opacity-100 transition-opacity"
+            data-alt="A sleek, minimalist dashboard interface for a classroom scheduling application."
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBQYBF1GOVQzGNlvDeBhhNT-y6hR4tnPjI4AHNeyGC4Ev0VcGQvk-JT7SR2oondOUWkX08q1ivfn9bZ_NqA4q9PmLEfOf7tdEvjw5gl5AdSmdUDbr4i7UOl8VY7pPKhckbVSuxKHYv-gu1SymGaKrGnjd2fg_aditPFzQLsqN8_Tl63DhOZ1wPWEUqBjr4WtPRe-aozUqUVy6WdYf9KEk0p4-wZA8_2cxYuc7ps-xF0_Bkm6Ez2Du4UGQ')">
+        </div>
+
+        <div class="p-8 flex-1 flex flex-col">
+
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                Classroom Scheduler
+            </h3>
+
+            <p class="font-body-md text-on-surface-variant mb-6 flex-1">
+                An automated solution to generate optimized timetables for educational institutions.
+                Prevents scheduling conflicts and ensures efficient resource allocation.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-primary/10 text-primary font-label-mono text-[12px] px-3 py-1 rounded-full">
+                    Python
+                </span>
+
+                <span class="bg-primary/10 text-primary font-label-mono text-[12px] px-3 py-1 rounded-full">
+                    Algorithm
+                </span>
+            </div>
+
+            <a
+                href="YOUR_CLASSROOM_SCHEDULER_GITHUB_LINK"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary font-label-mono text-[12px] hover:opacity-90 transition-all"
+            >
+                <span class="material-symbols-outlined text-[17px]">code</span>
+                View Repository
+                <span>↗</span>
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- Project 2 -->
+    <div class="bg-surface-container rounded-xl border border-white/5 shadow-lg overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 group flex flex-col h-full">
+
+        <div
+            class="bg-cover bg-center w-full h-48 border-b border-white/5 opacity-80 group-hover:opacity-100 transition-opacity"
+            data-alt="A high-tech digital graphic representing Artificial Intelligence text analysis."
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDJdJ3R_xEA4zhdxxSAbN7LU_v6goy8i7by0m-NrdWh3L1PqTb2fYwhLIb1XtChg3VQyTu91Sz70qj6JGQyzA7DBMpRTvaxL4aCt4E39F2SEVkA7_5xBvu8PcigCfZHFpvPvZ7m8jGmxVZ-WB2XdEL0drU8jHsUfGhrVVQVBLepGo4Mip9u4Yk_0_Gl30Oe1A1plaV_pJ8dszBjJDMwW-WOL25Mlm7Wsb1ELd3kfOo28WXz0p2VnIMrMg')">
+        </div>
+
+        <div class="p-8 flex-1 flex flex-col">
+
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                Check AI
+            </h3>
+
+            <p class="font-body-md text-on-surface-variant mb-6 flex-1">
+                A robust tool designed to detect AI-generated text content.
+                Employs advanced natural language processing techniques to differentiate
+                human writing from machine-generated text.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-primary/10 text-primary font-label-mono text-[12px] px-3 py-1 rounded-full">
+                    NLP
+                </span>
+
+                <span class="bg-primary/10 text-primary font-label-mono text-[12px] px-3 py-1 rounded-full">
+                    Machine Learning
+                </span>
+            </div>
+
+            <a
+                href="YOUR_CHECK_AI_GITHUB_LINK"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary font-label-mono text-[12px] hover:opacity-90 transition-all"
+            >
+                <span class="material-symbols-outlined text-[17px]">code</span>
+                View Repository
+                <span>↗</span>
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- Project 3 -->
+    <div class="bg-surface-container rounded-xl border border-white/5 shadow-lg overflow-hidden hover:-translate-y-2 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/10 group flex flex-col h-full">
+
+        <div
+            class="bg-cover bg-center w-full h-48 border-b border-white/5 opacity-80 group-hover:opacity-100 transition-opacity"
+            data-alt="A striking abstract representation of digital security and encryption."
+            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABJzPq3JHvla1QBZMgpDWO-6SL7-bttqkOrnxqYrgqNSm7uFdC-ZDSvmmfvwSyCz18BTk1l7ylPv8BSac-w2tW-wVq9SNHwiV6IylRiRaoQ5JwgMneZukaF29a3CmbW4MFDKt9b0fE85HS2jxl1b9zKMjxcBdhiG-knuDws8jbX-zNjp66tgJJ6L2XtRtAjGy4iwMv44iwRyi-T_8-kzG1MA7-4Y16yjD1NXc1sMxjxUhZWY2IYdElgA')">
+        </div>
+
+        <div class="p-8 flex-1 flex flex-col">
+
+            <h3 class="font-headline-sm text-headline-sm text-on-surface mb-3 group-hover:text-primary transition-colors">
+                Password Generator
+            </h3>
+
+            <p class="font-body-md text-on-surface-variant mb-6 flex-1">
+                A secure, customizable utility that generates highly resilient passwords.
+                Allows users to specify length and character types to meet various
+                security requirements.
+            </p>
+
+            <div class="flex flex-wrap gap-2">
+                <span class="bg-primary/10 text-primary font-label-mono text-[12px] px-3 py-1 rounded-full">
+                    JavaScript
+                </span>
+
+                <span class="bg-primary/10 text-primary font-label-mono text-[12px] px-3 py-1 rounded-full">
+                    Security
+                </span>
+            </div>
+
+            <a
+                href="YOUR_PASSWORD_GENERATOR_GITHUB_LINK"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-primary text-on-primary font-label-mono text-[12px] hover:opacity-90 transition-all"
+            >
+                <span class="material-symbols-outlined text-[17px]">code</span>
+                View Repository
+                <span>↗</span>
+            </a>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- ================= EDUCATION & CERTIFICATES ================= -->
+
+<section class="mb-section-gap scroll-mt-32" id="education">
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+        <!-- Education -->
+        <div>
+
+            <h2 class="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- LPU -->
+                <div class="bg-surface-container rounded-xl p-8 border-l-4 border-primary shadow-md hover:bg-surface-container-high transition-colors">
+
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                        Lovely Professional University
+                    </h3>
+
+                    <p class="font-label-mono text-label-mono text-secondary mt-1 mb-3">
+                        B.Tech Computer Science &amp; Engineering
+                    </p>
+
+                    <p class="font-body-md text-on-surface-variant flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[18px]">grade</span>
+                        CGPA:
+                        <span class="text-on-surface font-semibold">8.7</span>
+                    </p>
+
+                </div>
+
+
+                <!-- 12th -->
+                <div class="bg-surface-container rounded-xl p-8 border-l-4 border-surface-variant shadow-md hover:bg-surface-container-high transition-colors">
+
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                        Dharam Samaj Bal Mandir Senior Secondary School
+                    </h3>
+
+                    <p class="font-label-mono text-label-mono text-secondary/70 mt-1 mb-3">
+                        Senior Secondary Education (12th)
+                    </p>
+
+                    <div class="flex flex-col gap-1">
+
+                        <p class="font-body-md text-on-surface-variant flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">analytics</span>
+                            Percentage:
+                            <span class="text-on-surface font-semibold">83%</span>
+                        </p>
+
+                        <p class="font-body-md text-on-surface-variant flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                            April 2023 - Mar 2025
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 10th -->
+                <div class="bg-surface-container rounded-xl p-8 border-l-4 border-surface-variant shadow-md hover:bg-surface-container-high transition-colors">
+
+                    <h3 class="font-headline-sm text-headline-sm text-on-surface">
+                        Dharam Samaj Bal Mandir Senior Secondary School
+                    </h3>
+
+                    <p class="font-label-mono text-label-mono text-secondary/70 mt-1 mb-3">
+                        Secondary Education (10th)
+                    </p>
+
+                    <div class="flex flex-col gap-1">
+
+                        <p class="font-body-md text-on-surface-variant flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">analytics</span>
+                            Percentage:
+                            <span class="text-on-surface font-semibold">87%</span>
+                        </p>
+
+                        <p class="font-body-md text-on-surface-variant flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                            April 2022 - Mar 2023
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Certificates -->
+        <div>
+
+            <h2 class="font-headline-md text-headline-md text-primary mb-8 flex items-center gap-3">
+                <span class="material-symbols-outlined">verified</span>
+                Certificates
+            </h2>
+
+            <div class="space-y-6">
+
+                <!-- Certificate 1 -->
+                <div class="flex items-start gap-4 bg-surface-container rounded-xl p-6 border border-white/5 hover:border-secondary/30 transition-colors shadow-md group">
+
+                    <div class="p-3 bg-surface rounded-lg text-secondary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-headline-sm text-[20px] font-semibold text-on-surface">
+                            Introduction to Artificial Intelligence
+                        </h3>
+
+                        <p class="font-label-mono text-label-mono text-on-surface-variant mt-1">
+                            Issued by Infosys
+                        </p>
+
+                        <a
+                            href="https://drive.google.com/file/d/1NYmzxh1eOIR9ny73xsYPCm49S8UBm7lw/view?usp=drivesdk"
+                            target="_blank"
+                            class="inline-flex items-center gap-1 mt-3 text-secondary hover:text-primary transition-colors font-label-mono text-[12px]"
+                        >
+                            <span class="material-symbols-outlined text-[16px]">visibility</span>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Certificate 2 -->
+                <!-- <div class="flex items-start gap-4 bg-surface-container rounded-xl p-6 border border-white/5 hover:border-secondary/30 transition-colors shadow-md group">
+
+                    <div class="p-3 bg-surface rounded-lg text-secondary group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined">router</span>
+                    </div>
+
+                    <div>
+
+                        <h3 class="font-headline-sm text-[20px] font-semibold text-on-surface">
+                            Networking Basics
+                        </h3>
+
+                        <p class="font-label-mono text-label-mono text-on-surface-variant mt-1">
+                            Issued by Cisco Networking Academy
+                        </p>
+
+                        <a
+                            href="#"
+                            target="_blank"
+                            class="inline-flex items-center gap-1 mt-3 text-secondary hover:text-primary transition-colors font-label-mono text-[12px]"
+                        >
+                            <span class="material-symbols-outlined text-[16px]">visibility</span>
+                            View Certificate
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div> -->
+
+</section>
+
+
+</main>
+<!-- Footer Component -->
+<section class="mb-section-gap scroll-mt-32" id="contact">
+<h2 class="font-headline-md text-headline-md text-primary mb-12 flex items-center gap-3">
+<span class="material-symbols-outlined">mail</span>
+                Contact Me
+            </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- LinkedIn Card -->
+<a href="https://www.linkedin.com/in/rishit-jain-996659372/" target="_blank" class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group flex flex-col items-center text-center">
+<div class="p-4 bg-surface rounded-full text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-md">link</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">LinkedIn</h3>
+<p class="font-body-md text-on-surface-variant">Connect with me professionally</p>
+</a>
+<!-- GitHub Card -->
+<a href="https://github.com/rishit12517425" target="_blank" class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group flex flex-col items-center text-center">
+<div class="p-4 bg-surface rounded-full text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-md">code</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">GitHub</h3>
+<p class="font-body-md text-on-surface-variant">Check out my repositories</p>
+</a>
+<!-- Phone Card -->
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 shadow-lg hover:shadow-2xl hover:shadow-primary/5 transition-all duration-300 group flex flex-col items-center text-center">
+<div class="p-4 bg-surface rounded-full text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-headline-md">call</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-2">Phone</h3>
+<p class="font-body-md text-on-surface-variant">+91-9389494910</p>
+</div>
+</div>
+</section><footer class="w-full bg-surface-container-lowest dark:bg-surface-container-lowest py-section-gap-mobile md:py-12 mt-auto border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-gutter max-w-container-max mx-auto gap-8">
+<div class="font-headline-sm text-headline-sm text-on-surface opacity-80 hover:opacity-100 transition-opacity">
+                
+            </div>
+<div class="flex gap-6 font-label-mono text-label-mono text-on-surface-variant">
+<a class="hover:text-tertiary transition-colors duration-200" href="https://www.linkedin.com/in/rishit-jain-996659372/">LinkedIn</a>
+<a class="hover:text-tertiary transition-colors duration-200" href="https://github.com/rishit12517425">GitHub</a>
+<a class="hover:text-tertiary transition-colors duration-200" href="#">Resume</a>
+</div>
+<div class="font-label-mono text-label-mono text-on-surface-variant opacity-60 text-sm">© 2026 Rishit Jain. Built with Precision.</div>
+</div>
+</footer>
+<!-- Simple Active State Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('header nav a[href^="#"]');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            if (link.getAttribute('href') === `#${entry.target.id}`) {
+                                link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                                link.classList.remove('text-on-surface-variant');
+                            } else {
+                                link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                                link.classList.add('text-on-surface-variant');
+                            }
+                        });
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+
+
+
+
+
+
+
+
+</body></html>
